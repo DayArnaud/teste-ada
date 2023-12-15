@@ -71,3 +71,20 @@ console.log(ehPalindromo("osso"));
 console.log(ehPalindromo("radar"));
 
 ////////////////////////////////////////////////////////////////////////
+// Quinta questão:
+const numeros = [1, 2, 3, 4, 5, 6];
+
+const somaImpares = (numeros) => {
+  let soma = 0;
+
+  for (let numero of numeros) {
+    if (numero % 2 !== 0) {
+      soma += numero;
+    }
+  }
+  return soma;
+};
+const retorno = somaImpares(numeros);
+console.log(
+  `Questão 5: o retorno/resultado da soma dos números ímpares do array é: ${retorno}`
+);
