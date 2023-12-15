@@ -8,7 +8,7 @@ while (fator <= 10) {
   produto *= fator;
   fator += 2;
 }
-console.log(`A alternativa correta da questão 1 é a letra C) ${produto}`);
+console.log(`Questão 1: a alternativa correta é a letra C) ${produto}`);
 // prod: 1*3=3 | fator: 3+2=5
 // prod: 3*5=15 | fator: 5+2=7
 // prod: 15*7=105 | fator: 7+2=9
@@ -25,7 +25,7 @@ for (let i = 1; i <= 4; i++) {
   }
 }
 console.log(
-  `Questão 2: a saída deste código no console é a letra B) conforme resultado ao executar no terminal`
+  `Questão 2: a alternativa correta é a letra B) conforme resultado ao executar no terminal`
 );
 
 ///////////////////////////////////////////////////////////////////////////
@@ -38,7 +38,36 @@ function filtrarStringsCurtas(strings, tamanhoMinimo) {
   return strings.filter((string) => string.length >= tamanhoMinimo);
 }
 console.log(
-  `Após filtrar as strings com tamanho maior ou igual a 5, o resultado é: "${resultado}", e a alternativa correta é a letra C)`
+  `Questão 3: a alternativa correta é a letra C), após filtrar as strings com tamanho maior ou igual a 5, o resultado é: "${resultado}"`
 );
 
 /////////////////////////////////////////////////////////////////////////
+
+// Quarta questão:
+const ehPalindromo = (palavra) => {
+  let palavraPura = "";
+  palavra = palavra.toLowerCase();
+
+  for (let caractere of palavra) {
+    if (
+      (caractere >= "a" && caractere <= "z") ||
+      (caractere >= "0" && caractere <= "9")
+    ) {
+      palavraPura += caractere;
+    }
+  }
+
+  let palavraInvertida = palavraPura
+    .split("")
+    .reduce((acumulador, caractereAtual) => caractereAtual + acumulador, "");
+
+  return palavraPura === palavraInvertida;
+};
+console.log(
+  `Questão 4: nos exemplos "Ana, osso e radar", todos retornam true conforme segue:`
+);
+console.log(ehPalindromo("Ana"));
+console.log(ehPalindromo("osso"));
+console.log(ehPalindromo("radar"));
+
+////////////////////////////////////////////////////////////////////////
