@@ -25,5 +25,20 @@ for (let i = 1; i <= 4; i++) {
   }
 }
 console.log(
-  `Questão 2: a saída deste código no console é a letra B) conforme resultado acima`
+  `Questão 2: a saída deste código no console é a letra B) conforme resultado ao executar no terminal`
 );
+
+///////////////////////////////////////////////////////////////////////////
+
+// Terceira questão:
+const palavras = ["sol", "lua", "estrela", "planeta", "galáxia"];
+const resultado = filtrarStringsCurtas(palavras, 5);
+
+function filtrarStringsCurtas(strings, tamanhoMinimo) {
+  return strings.filter((string) => string.length >= tamanhoMinimo);
+}
+console.log(
+  `Após filtrar as strings com tamanho maior ou igual a 5, o resultado é: "${resultado}", e a alternativa correta é a letra C)`
+);
+
+/////////////////////////////////////////////////////////////////////////
